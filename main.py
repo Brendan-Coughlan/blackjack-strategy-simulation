@@ -13,3 +13,9 @@ for player_stand_threshold in tqdm(player_stand_thresholds, desc="Loading...", l
 summary = summarize(full_results)
 display_table(summary)
 export_to_csv(summary)
+
+CONFIG["player_strategy"] = "random_threshold"
+simulation_results = run_simulation()
+full_results.append(simulation_results)
+summary = summarize(full_results)
+display_table(summary)
